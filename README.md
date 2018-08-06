@@ -1,9 +1,11 @@
 # paramstore
-Finds all string defined lambda constants in the form `WEBSITE_URL: https://google.com` and adds them to the parameter store, creates the params in the template, and links those constants to the parameters
+Finds all string defined lambda constants in the form `KEY: FuFSUA6odL9x2u8VqgsdsajP27uoWMQL3ZTtzpnF` and adds them to the parameter store, creates the params in the template, and links those constants to the parameters
 
 usage: `python param_store.py --app seatgeek --profiles 1ticketdev,dti1ticketprod`
 
 It adds all of the params to param store in the specified profiles.
+
+**NOTE: The rest of the readme is out of date, this tool used to add ALL parameters to the store, now we only move AWS tokens**
 
 It edits your `template.yaml` and replaces your string constants with `!Ref`s to params defined at the top of the file
 
@@ -15,7 +17,6 @@ and modifies your deploy script to point to the newly created parameters:
 
 ![](https://i.imgur.com/80ubcnD.png)
 
-(Notice the duplicates, they must be removed by hand for now)
 
 You can add it to your `/usr/local/bin`:
 

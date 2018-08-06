@@ -153,5 +153,3 @@ for obj in pairs_json:
         print(f"{path}:{value}")
 
 print('parameters added to parameter store.')
-
-print("Please take a look over your template.yaml and deploy.sh to delete duplicates")
